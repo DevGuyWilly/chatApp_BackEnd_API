@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const userRoute = require("./routes/users");
 const userAuth = require("./routes/auth");
+const postRoute = require("./routes/posts");
 const app = express();
 
 dotenv.config();
@@ -27,6 +28,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 
 app.use("/api/users", userRoute);
+app.use("/api/post", postRoute);
 app.use("/api/auth", userAuth);
 
 const PORT = 5000;

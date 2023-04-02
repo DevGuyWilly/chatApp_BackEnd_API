@@ -99,7 +99,7 @@ router.put("/:id/follow", async (req, res) => {
   }
 });
 
-//UNFOLLOW A USER
+//FIND A USER BY ID AND UNFOLLOW USER
 router.put("/:id/unfollow", async (req, res) => {
   if (req.body.userId === req.params.id) {
     res.status(403).status({
